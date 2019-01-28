@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Welcome</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/tyle.css}"/>
+       <link rel="stylesheet" type="text/css" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+      
+   </head>
+   <body>
+      <h1 class="text-center">Welcome To Student Registration Form</h1>
+      <h2 class="text-center" th:utext="${message}">..!..</h2>
+       
+      <!--  
+       
+         In Thymeleaf the equivalent of
+         JSP's ${pageContext.request.contextPath}/edit.html
+         would be @{/edit.html}
+          
+         
+          
+      <a type="button" class="btn btn-primary"th:href="@{/personList}">Person List</a>-->
+      
+      <button style="display: table; margin: 0 auto;"type="button" class="btn btn-outline-success and-all-other-classes"> 
+  <a th:href="@{/form}" style="color:inherit;text-decoration:none;">Go to Student List </a>
+</button>  
+     
+ 
+       
+   </body>
+    
+</html>

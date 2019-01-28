@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Info</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+      <link rel="stylesheet" type="text/css" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+</head>
+<body>
+      <h1 class="text-center">Student List</h1>
+      <button style="display: table; margin: 0 auto;"type="button" class="btn btn-outline-success and-all-other-classes pull-right"> 
+  <a th:href="@{/form}" style="color:inherit;text-decoration:none;">Add Students</a>
+</button>
+      <br/><br/>
+      <div th:if="${not #lists.isEmpty(customer)}">
+         <table border="1">
+            <tr>
+            <th>ID</th>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Father Name</th>
+                <th>Mother Name</th>
+                 <th>Email</th>
+               <th>Phone No</th>
+               <th>Birth Date</th>
+            </tr>
+            <tr th:each ="customer_num : ${customer}">
+            <td th:utext="${customer_num.id}">...</td>
+               <td th:utext="${customer_num.firstname}">...</td>
+               <td th:utext="${customer_num.lastname}">...</td>
+               <td th:utext="${customer_num.fathername}">...</td>
+               <td th:utext="${customer_num.mothername}">...</td>
+               <td th:utext="${customer_num.email}">...</td>
+               <td th:utext="${customer_num.phoneno}">...</td>
+               <td th:utext="${customer_num.birthdate}">...</td>
+            </tr>
+         </table>
+      </div>
+
+</body>
+</html>

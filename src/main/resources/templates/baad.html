@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Add Student</title>
+      <!-- <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>  -->
+      <link rel="stylesheet" type="text/css" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+   </head>
+   <body>
+   
+ <div class="container">
+  <div class="jumbotron">
+    <h1 class="text-center">Student Entry Page</h1> 
+    <p class="text-center">Admin can enter student information in this page</p> 
+  </div>
+</div>
+       
+      <!--  
+         In Thymeleaf the equivalent of
+         JSP's ${pageContext.request.contextPath}/edit.html
+         would be @{/edit.html}         
+         -->
+      
+  
+<div class="card bg-light p-3">
+ <p class="mb-0">Please Enter the information of Students:</p>
+</div>
+
+
+      <br>
+      <form action="#" th:action="@{/form}"
+         th:object="${student}" method="POST">
+         
+   <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{id}" placeholder=" Student ID">
+      </div>
+  </div>
+  
+     <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{firstname}" placeholder=" Student First Name">
+      </div>
+  </div>
+     <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{lastname}" placeholder=" Student Last Name">
+      </div>
+  </div>
+     <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{fathername}" placeholder=" Student Father Name">
+      </div>
+  </div>
+       <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{motherame}" placeholder=" Student Mother Name">
+      </div>
+  </div>
+       <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{email}" placeholder=" Student Email">
+      </div>
+  </div>
+     <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{phoneno}" placeholder=" Student Phone Number">
+      </div>
+  </div>
+     <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-6">
+      <input type="text" class="form-control" th:field="*{birthdate}" placeholder=" Student Birth Date">
+      </div>
+  </div>  
+  
+      <div class="form-group">
+      <!-- <label class="control-label col-sm-2" for="email">ID</label>-->
+      <div class="col-sm-2">
+      <input type="submit" class="btn btn-info" value="Submit">
+      </div>
+  </div>
+      </form>
+       
+      
+       
+   </body>
+</html>

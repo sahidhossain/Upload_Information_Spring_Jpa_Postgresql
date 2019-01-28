@@ -1,0 +1,25 @@
+h1 {
+    color:#0000FF;
+}
+ 
+h2 {
+    color:#FF0000;
+}
+ 
+table, td, th {
+  border: 2px solid #1eaecc;
+}
+tr
+{
+	height:40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 50px;
+  
+}

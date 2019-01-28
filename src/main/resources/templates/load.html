@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Info</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'id: ' + ${customer.id}" />
+    <p th:text="'First Name: ' + ${customer.firstname}" />
+    <p th:text="'Last Name: ' + ${customer.lastname}" />
+</body>
+</html>
