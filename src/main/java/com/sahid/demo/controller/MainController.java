@@ -50,7 +50,8 @@ public class MainController {
 //    	Log.info(info);
     	log.info(info);
         sr.save(student);
-    	return "success";
+        allData(model);
+    	return "all";
     }
     
 //	@RequestMapping("/load")
@@ -75,7 +76,7 @@ public class MainController {
 	public String allData(Model model) {
 
 		model.addAttribute("customer", ss.getAllStudentData());
-
+		
 		return "all";
 	}
 //    @RequestMapping(value="/load", method=RequestMethod.GET)
